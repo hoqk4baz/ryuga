@@ -8,7 +8,7 @@ import time
 ip_request_count = {}
 REQUEST_LIMIT = 3
 BLOCK_DURATION = 24 * 60 * 60  # 1 gün (saniye)
-
+token = requests.get("https://raw.githubusercontent.com/hoqk4baz/ryuga/refs/heads/main/token.json").json()["token"]
 class MyRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         client_ip = self.client_address[0]
@@ -92,7 +92,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
                 'User-Agent': user_agent,
                 'Accept': "application/json",
                 'Content-Type': "application/json",
-                'authorization': "TOKEN",
+                'authorization': token,
                 'sec-fetch-site': "same-site",
                 'accept-language': "tr-TR,tr;q=0.9",
                 'sec-fetch-mode': "cors",
