@@ -6,7 +6,7 @@ import time
 
 # IP izleme tablosu
 ip_request_count = {}
-REQUEST_LIMIT = 3
+REQUEST_LIMIT = 6
 BLOCK_DURATION = 24 * 60 * 60  # 1 gün (saniye)
 token = requests.get("https://raw.githubusercontent.com/hoqk4baz/ryuga/refs/heads/main/token.json").json()["token"]
 class MyRequestHandler(BaseHTTPRequestHandler):
