@@ -155,6 +155,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             </head>
             <body>
                 <h1>who is RYUGA</h1>
+                <h1>TG: @whoisryuga</h1>
                 <div class="result-box">
                     <strong>{baslik}</strong>
                     <p>{api_result}</p>
